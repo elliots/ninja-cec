@@ -1,0 +1,313 @@
+DEBUG:   [               0]	unregistering all CEC clients
+DEBUG:   [               1]	Broadcast (F): osd name set to 'Broadcast'
+DEBUG:   [               1]	connection opened, clearing any previous input and waiting for active transmissions to end before starting
+DEBUG:   [               1]	communication thread started
+DEBUG:   [              13]	turning controlled mode on
+NOTICE:  [              36]	connection opened
+DEBUG:   [              36]	processor thread started
+DEBUG:   [              36]	<< Broadcast (F) -> TV (0): POLL
+TRAFFIC: [              36]	<< f0
+DEBUG:   [              36]	setting the line timeout to 3
+DEBUG:   [              75]	>> POLL sent
+DEBUG:   [              76]	TV (0): device status changed into 'present'
+DEBUG:   [              76]	<< requesting vendor ID of 'TV' (0)
+TRAFFIC: [              76]	<< f0:8c
+TRAFFIC: [             281]	>> 0f:87:00:00:f0
+DEBUG:   [             281]	>> TV (0) -> Broadcast (F): device vendor id (87)
+DEBUG:   [             281]	TV (0): vendor = Samsung (0000f0)
+DEBUG:   [             281]	expected response received (87: device vendor id)
+DEBUG:   [             281]	replacing the command handler for device 'TV' (0)
+NOTICE:  [             281]	registering new CEC client - v2.1.1
+DEBUG:   [             281]	detecting logical address for type 'recording device'
+DEBUG:   [             282]	trying logical address 'Recorder 1'
+DEBUG:   [             282]	<< Recorder 1 (1) -> Recorder 1 (1): POLL
+TRAFFIC: [             282]	<< 11
+DEBUG:   [             315]	CEC transmission - received response - TRANSMIT_FAILED_ACK
+TRAFFIC: [             315]	<< 11
+DEBUG:   [             349]	CEC transmission - received response - TRANSMIT_FAILED_ACK
+DEBUG:   [             349]	>> POLL not sent
+DEBUG:   [             349]	using logical address 'Recorder 1'
+DEBUG:   [             349]	Recorder 1 (1): device status changed into 'handled by libCEC'
+DEBUG:   [             349]	Recorder 1 (1): power status changed from 'unknown' to 'on'
+DEBUG:   [             349]	Recorder 1 (1): CEC version 1.4
+DEBUG:   [             349]	AllocateLogicalAddresses - device '0', type 'recording device', LA '1'
+DEBUG:   [             349]	setting ackmask to  2
+DEBUG:   [             355]	Recorder 1 (1): osd name set to 'CECTester'
+DEBUG:   [             355]	Recorder 1 (1): menu language set to 'eng'
+DEBUG:   [             355]	GetPhysicalAddress - trying to get the physical address via ADL
+DEBUG:   [             355]	GetPhysicalAddress - ADL returned physical address 0000
+DEBUG:   [             355]	GetPhysicalAddress - trying to get the physical address via nvidia driver
+DEBUG:   [             355]	GetPhysicalAddress - nvidia driver returned physical address 0000
+DEBUG:   [             355]	GetPhysicalAddress - trying to get the physical address from the OS
+DEBUG:   [             355]	GetPhysicalAddress - OS returned physical address 0000
+DEBUG:   [             355]	SetDevicePhysicalAddress - not setting invalid physical address 0000
+NOTICE:  [             355]	setting HDMI port to 1 on device TV (0)
+DEBUG:   [             355]	Recorder 1 (1): physical address changed from ffff to 1000
+DEBUG:   [             355]	<< Recorder 1 (1) -> broadcast (F): physical adddress 1000
+TRAFFIC: [             355]	<< 1f:84:10:00:01
+DEBUG:   [             490]	using persisted autonomous mode setting: 'enabled'
+DEBUG:   [             496]	using persisted CEC version setting: '1.4'
+DEBUG:   [             502]	using persisted logical address setting: 'Recorder 1'
+DEBUG:   [             508]	using persisted device type setting: 'recording device'
+DEBUG:   [             513]	using persisted logical address mask setting: '206'
+DEBUG:   [             530]	using persisted device name setting: 'CECTester'
+DEBUG:   [             536]	using persisted physical address setting: '1000'
+NOTICE:  [             537]	CEC client registered: libCEC version = 2.1.1, client version = 2.1.1, firmware version = 4, firmware build date: Thu Dec  6 11:15:20 2012 +0000, logical address(es) = Recorder 1 (1) , base device: TV (0), HDMI port number: 1, physical address: 1.0.0.0, host: x86_64-apple-darwin12.3.0, features: 'P8 USB' 'P8 USB detect', git revision: 3ff78be, compiled on: Sat Apr 27 04:53:07 UTC 2013 by elliot@Thor on Darwin 12.3.0 (x86_64)
+DEBUG:   [             537]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [             537]	<< 10:47:43:45:43:54:65:73:74:65:72
+DEBUG:   [             808]	<< requesting power status of 'TV' (0)
+TRAFFIC: [             808]	<< 10:8f
+TRAFFIC: [             968]	>> 01:90:00
+DEBUG:   [             968]	>> TV (0) -> Recorder 1 (1): report power status (90)
+DEBUG:   [             968]	TV (0): power status changed from 'unknown' to 'on'
+DEBUG:   [             968]	expected response received (90: report power status)
+TRAFFIC: [           12147]	>> 01:44:01
+DEBUG:   [           12147]	>> TV (0) -> Recorder 1 (1): user control pressed (44)
+DEBUG:   [           12147]	key pressed: up (1)
+DEBUG:   [           12147]	making Recorder 1 (1) the active source
+DEBUG:   [           12147]	marking the adapter as active source
+NOTICE:  [           12152]	>> source activated: Recorder 1 (1)
+TRAFFIC: [           12520]	>> 01:45
+DEBUG:   [           12520]	>> TV (0) -> Recorder 1 (1): user control release (45)
+DEBUG:   [           12520]	key released: up (1)
+TRAFFIC: [           13156]	>> 01:44:02
+DEBUG:   [           13156]	>> TV (0) -> Recorder 1 (1): user control pressed (44)
+DEBUG:   [           13156]	key pressed: down (2)
+TRAFFIC: [           13530]	>> 01:45
+DEBUG:   [           13531]	>> TV (0) -> Recorder 1 (1): user control release (45)
+DEBUG:   [           13531]	key released: down (2)
+TRAFFIC: [           13833]	>> 01:44:03
+DEBUG:   [           13834]	>> TV (0) -> Recorder 1 (1): user control pressed (44)
+DEBUG:   [           13834]	key pressed: left (3)
+TRAFFIC: [           14214]	>> 01:45
+DEBUG:   [           14214]	>> TV (0) -> Recorder 1 (1): user control release (45)
+DEBUG:   [           14214]	key released: left (3)
+TRAFFIC: [           15164]	>> 01:44:04
+DEBUG:   [           15164]	>> TV (0) -> Recorder 1 (1): user control pressed (44)
+DEBUG:   [           15165]	key pressed: right (4)
+TRAFFIC: [           15550]	>> 01:45
+DEBUG:   [           15550]	>> TV (0) -> Recorder 1 (1): user control release (45)
+DEBUG:   [           15550]	key released: right (4)
+TRAFFIC: [           16210]	>> 01:44:00
+DEBUG:   [           16210]	>> TV (0) -> Recorder 1 (1): user control pressed (44)
+DEBUG:   [           16210]	key pressed: select (0)
+TRAFFIC: [           16596]	>> 01:45
+DEBUG:   [           16596]	>> TV (0) -> Recorder 1 (1): user control release (45)
+DEBUG:   [           16596]	key released: select (0)
+TRAFFIC: [           19978]	>> 0f:36
+DEBUG:   [           19978]	>> TV (0) -> Broadcast (F): standby (36)
+DEBUG:   [           19978]	TV (0): power status changed from 'on' to 'standby'
+TRAFFIC: [           50256]	>> 0f:80:00:00:20:00
+DEBUG:   [           50256]	>> TV (0) -> Broadcast (F): routing change (80)
+DEBUG:   [           50256]	TV (0): power status changed from 'standby' to 'on'
+TRAFFIC: [           50330]	>> 0f:85
+DEBUG:   [           50330]	>> TV (0) -> Broadcast (F): request active source (85)
+DEBUG:   [           50330]	>> 0 requests active source
+NOTICE:  [           50330]	<< Recorder 1 (1) -> broadcast (F): active source (1000)
+TRAFFIC: [           50330]	<< 1f:82:10:00
+TRAFFIC: [           50609]	>> 0f:80:00:00:20:00
+DEBUG:   [           50609]	>> TV (0) -> Broadcast (F): routing change (80)
+TRAFFIC: [           50764]	>> 0f:32:65:6e:67
+DEBUG:   [           50764]	>> TV (0) -> Broadcast (F): set menu language (32)
+DEBUG:   [           50764]	TV (0): menu language set to 'eng'
+TRAFFIC: [           50865]	>> 01:8d:02
+DEBUG:   [           50865]	>> TV (0) -> Recorder 1 (1): menu request (8D)
+DEBUG:   [           50865]	<< Recorder 1 (1) -> TV (0): menu state 'activated'
+TRAFFIC: [           50865]	<< 10:8e:00
+TRAFFIC: [           51045]	>> 01:1a:01
+DEBUG:   [           51045]	>> TV (0) -> Recorder 1 (1): give deck status (1A)
+DEBUG:   [           51045]	<< Recorder 1 (1) -> TV (0): deck status 'stop'
+TRAFFIC: [           51045]	<< 10:1b:1a
+TRAFFIC: [           51174]	>> 01
+DEBUG:   [           51174]	<< POLL: TV (0) -> Recorder 1 (1)
+TRAFFIC: [           51220]	>> 02
+DEBUG:   [           51220]	<< POLL: TV (0) -> Recorder 2 (2)
+TRAFFIC: [           51260]	>> 02
+DEBUG:   [           51260]	<< POLL: TV (0) -> Recorder 2 (2)
+TRAFFIC: [           51299]	>> 02
+DEBUG:   [           51300]	<< POLL: TV (0) -> Recorder 2 (2)
+TRAFFIC: [           51344]	>> 02
+DEBUG:   [           51345]	<< POLL: TV (0) -> Recorder 2 (2)
+TRAFFIC: [           51390]	>> 02
+DEBUG:   [           51390]	<< POLL: TV (0) -> Recorder 2 (2)
+TRAFFIC: [           51430]	>> 03
+DEBUG:   [           51430]	<< POLL: TV (0) -> Tuner 1 (3)
+TRAFFIC: [           51469]	>> 03
+DEBUG:   [           51469]	<< POLL: TV (0) -> Tuner 1 (3)
+TRAFFIC: [           51509]	>> 03
+DEBUG:   [           51509]	<< POLL: TV (0) -> Tuner 1 (3)
+TRAFFIC: [           51549]	>> 03
+DEBUG:   [           51549]	<< POLL: TV (0) -> Tuner 1 (3)
+TRAFFIC: [           51595]	>> 03
+DEBUG:   [           51595]	<< POLL: TV (0) -> Tuner 1 (3)
+TRAFFIC: [           51635]	>> 04
+DEBUG:   [           51635]	<< POLL: TV (0) -> Playback 1 (4)
+TRAFFIC: [           51680]	>> 04
+DEBUG:   [           51680]	<< POLL: TV (0) -> Playback 1 (4)
+TRAFFIC: [           51715]	>> 04
+DEBUG:   [           51715]	<< POLL: TV (0) -> Playback 1 (4)
+TRAFFIC: [           51754]	>> 04
+DEBUG:   [           51754]	<< POLL: TV (0) -> Playback 1 (4)
+TRAFFIC: [           51806]	>> 04
+DEBUG:   [           51806]	<< POLL: TV (0) -> Playback 1 (4)
+TRAFFIC: [           51846]	>> 05
+DEBUG:   [           51846]	<< POLL: TV (0) -> Audio (5)
+TRAFFIC: [           51886]	>> 05
+DEBUG:   [           51886]	<< POLL: TV (0) -> Audio (5)
+TRAFFIC: [           51925]	>> 05
+DEBUG:   [           51926]	<< POLL: TV (0) -> Audio (5)
+TRAFFIC: [           51965]	>> 05
+DEBUG:   [           51965]	<< POLL: TV (0) -> Audio (5)
+TRAFFIC: [           52010]	>> 05
+DEBUG:   [           52010]	<< POLL: TV (0) -> Audio (5)
+TRAFFIC: [           52055]	>> 06
+DEBUG:   [           52055]	<< POLL: TV (0) -> Tuner 2 (6)
+TRAFFIC: [           52094]	>> 06
+DEBUG:   [           52094]	<< POLL: TV (0) -> Tuner 2 (6)
+TRAFFIC: [           52134]	>> 06
+DEBUG:   [           52134]	<< POLL: TV (0) -> Tuner 2 (6)
+TRAFFIC: [           52174]	>> 06
+DEBUG:   [           52174]	<< POLL: TV (0) -> Tuner 2 (6)
+TRAFFIC: [           52219]	>> 06
+DEBUG:   [           52219]	<< POLL: TV (0) -> Tuner 2 (6)
+TRAFFIC: [           52259]	>> 07
+DEBUG:   [           52259]	<< POLL: TV (0) -> Tuner 3 (7)
+TRAFFIC: [           52299]	>> 07
+DEBUG:   [           52299]	<< POLL: TV (0) -> Tuner 3 (7)
+TRAFFIC: [           52339]	>> 07
+DEBUG:   [           52339]	<< POLL: TV (0) -> Tuner 3 (7)
+TRAFFIC: [           52379]	>> 07
+DEBUG:   [           52379]	<< POLL: TV (0) -> Tuner 3 (7)
+TRAFFIC: [           52425]	>> 07
+DEBUG:   [           52425]	<< POLL: TV (0) -> Tuner 3 (7)
+TRAFFIC: [           52465]	>> 08
+DEBUG:   [           52465]	<< POLL: TV (0) -> Playback 2 (8)
+TRAFFIC: [           52510]	>> 08
+DEBUG:   [           52510]	<< POLL: TV (0) -> Playback 2 (8)
+TRAFFIC: [           52550]	>> 08
+DEBUG:   [           52550]	<< POLL: TV (0) -> Playback 2 (8)
+TRAFFIC: [           52590]	>> 08
+DEBUG:   [           52590]	<< POLL: TV (0) -> Playback 2 (8)
+TRAFFIC: [           52635]	>> 08
+DEBUG:   [           52635]	<< POLL: TV (0) -> Playback 2 (8)
+TRAFFIC: [           52674]	>> 09
+DEBUG:   [           52674]	<< POLL: TV (0) -> Recorder 3 (9)
+TRAFFIC: [           52714]	>> 09
+DEBUG:   [           52714]	<< POLL: TV (0) -> Recorder 3 (9)
+TRAFFIC: [           52754]	>> 09
+DEBUG:   [           52754]	<< POLL: TV (0) -> Recorder 3 (9)
+TRAFFIC: [           52794]	>> 09
+DEBUG:   [           52794]	<< POLL: TV (0) -> Recorder 3 (9)
+TRAFFIC: [           52840]	>> 09
+DEBUG:   [           52840]	<< POLL: TV (0) -> Recorder 3 (9)
+TRAFFIC: [           52885]	>> 0a
+DEBUG:   [           52885]	<< POLL: TV (0) -> Tuner 4 (a)
+TRAFFIC: [           52924]	>> 0a
+DEBUG:   [           52924]	<< POLL: TV (0) -> Tuner 4 (a)
+TRAFFIC: [           52963]	>> 0a
+DEBUG:   [           52963]	<< POLL: TV (0) -> Tuner 4 (a)
+TRAFFIC: [           53003]	>> 0a
+DEBUG:   [           53003]	<< POLL: TV (0) -> Tuner 4 (a)
+TRAFFIC: [           53053]	>> 0a
+DEBUG:   [           53053]	<< POLL: TV (0) -> Tuner 4 (a)
+TRAFFIC: [           53091]	>> 0b
+DEBUG:   [           53091]	<< POLL: TV (0) -> Playback 3 (b)
+TRAFFIC: [           53130]	>> 0b
+DEBUG:   [           53130]	<< POLL: TV (0) -> Playback 3 (b)
+TRAFFIC: [           53170]	>> 0b
+DEBUG:   [           53170]	<< POLL: TV (0) -> Playback 3 (b)
+TRAFFIC: [           53210]	>> 0b
+DEBUG:   [           53210]	<< POLL: TV (0) -> Playback 3 (b)
+TRAFFIC: [           53260]	>> 0b
+DEBUG:   [           53260]	<< POLL: TV (0) -> Playback 3 (b)
+TRAFFIC: [           53300]	>> 0c
+DEBUG:   [           53300]	<< POLL: TV (0) -> Reserved 1 (c)
+TRAFFIC: [           53339]	>> 0c
+DEBUG:   [           53339]	<< POLL: TV (0) -> Reserved 1 (c)
+TRAFFIC: [           53379]	>> 0c
+DEBUG:   [           53379]	<< POLL: TV (0) -> Reserved 1 (c)
+TRAFFIC: [           53419]	>> 0c
+DEBUG:   [           53419]	<< POLL: TV (0) -> Reserved 1 (c)
+TRAFFIC: [           53464]	>> 0c
+DEBUG:   [           53464]	<< POLL: TV (0) -> Reserved 1 (c)
+TRAFFIC: [           53504]	>> 0d
+DEBUG:   [           53504]	<< POLL: TV (0) -> Reserved 2 (d)
+TRAFFIC: [           53544]	>> 0d
+DEBUG:   [           53544]	<< POLL: TV (0) -> Reserved 2 (d)
+TRAFFIC: [           53584]	>> 0d
+DEBUG:   [           53584]	<< POLL: TV (0) -> Reserved 2 (d)
+TRAFFIC: [           53625]	>> 0d
+DEBUG:   [           53625]	<< POLL: TV (0) -> Reserved 2 (d)
+TRAFFIC: [           53676]	>> 0d
+DEBUG:   [           53676]	<< POLL: TV (0) -> Reserved 2 (d)
+TRAFFIC: [           53716]	>> 0e
+DEBUG:   [           53716]	<< POLL: TV (0) -> Free use (e)
+TRAFFIC: [           53756]	>> 0e
+DEBUG:   [           53756]	<< POLL: TV (0) -> Free use (e)
+TRAFFIC: [           53796]	>> 0e
+DEBUG:   [           53796]	<< POLL: TV (0) -> Free use (e)
+TRAFFIC: [           53835]	>> 0e
+DEBUG:   [           53835]	<< POLL: TV (0) -> Free use (e)
+TRAFFIC: [           53887]	>> 0e
+DEBUG:   [           53887]	<< POLL: TV (0) -> Free use (e)
+TRAFFIC: [           53960]	>> 01:8c
+DEBUG:   [           53960]	>> TV (0) -> Recorder 1 (1): give device vendor id (8C)
+DEBUG:   [           53960]	<< Recorder 1 (1) -> TV (0): vendor id feature abort
+DEBUG:   [           53960]	<< transmitting abort message
+TRAFFIC: [           53960]	<< 10:00:8c:00
+TRAFFIC: [           55464]	>> 01:46
+DEBUG:   [           55464]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [           55464]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [           55464]	<< 10:47:43:45:43:54:65:73:74:65:72
+TRAFFIC: [           55928]	>> 01:a0:00:00:f0:23
+DEBUG:   [           55928]	>> TV (0) -> Recorder 1 (1): vendor command with id (A0)
+DEBUG:   [           55928]	sending abort with opcode a0 and reason 'invalid operand' to TV
+DEBUG:   [           55928]	<< transmitting abort message
+TRAFFIC: [           55928]	<< 10:00:a0:03
+NOTICE:  [           55929]	Unmapped code detected. Please send an email to support@pulse-eight.com with the following details, and if you pressed a key, tell us which one you pressed, and we'll add support for this it.
+CEC command: >> 01:a0:00:00:f0:23
+Vendor ID: Samsung (0000f0)
+TRAFFIC: [           57319]	>> 01:9f
+DEBUG:   [           57319]	>> TV (0) -> Recorder 1 (1): get cec version (9F)
+DEBUG:   [           57319]	<< Recorder 1 (1) -> TV (0): cec version 1.4
+TRAFFIC: [           57319]	<< 10:9e:05
+TRAFFIC: [           57482]	>> 0f:85
+DEBUG:   [           57483]	>> TV (0) -> Broadcast (F): request active source (85)
+DEBUG:   [           57483]	>> 0 requests active source
+NOTICE:  [           57483]	<< Recorder 1 (1) -> broadcast (F): active source (1000)
+TRAFFIC: [           57483]	<< 1f:82:10:00
+TRAFFIC: [           57689]	>> 01:8d:02
+DEBUG:   [           57689]	>> TV (0) -> Recorder 1 (1): menu request (8D)
+DEBUG:   [           57689]	<< Recorder 1 (1) -> TV (0): menu state 'activated'
+TRAFFIC: [           57689]	<< 10:8e:00
+TRAFFIC: [           57864]	>> 01:8d:02
+DEBUG:   [           57864]	>> TV (0) -> Recorder 1 (1): menu request (8D)
+DEBUG:   [           57864]	<< Recorder 1 (1) -> TV (0): menu state 'activated'
+TRAFFIC: [           57864]	<< 10:8e:00
+TRAFFIC: [           74774]	>> 01:41:25
+DEBUG:   [           74774]	>> TV (0) -> Recorder 1 (1): play (41)
+TRAFFIC: [           78419]	>> 01:41:24
+DEBUG:   [           78419]	>> TV (0) -> Recorder 1 (1): play (41)
+TRAFFIC: [           81013]	>> 01:44:49
+DEBUG:   [           81013]	>> TV (0) -> Recorder 1 (1): user control pressed (44)
+DEBUG:   [           81013]	key pressed: Fast forward (49)
+TRAFFIC: [           81907]	>> 01:45
+DEBUG:   [           81907]	>> TV (0) -> Recorder 1 (1): user control release (45)
+DEBUG:   [           81907]	key released: Fast forward (49)
+TRAFFIC: [           83007]	>> 01:44:49
+DEBUG:   [           83007]	>> TV (0) -> Recorder 1 (1): user control pressed (44)
+DEBUG:   [           83007]	key pressed: Fast forward (49)
+TRAFFIC: [           83409]	>> 01:45
+DEBUG:   [           83409]	>> TV (0) -> Recorder 1 (1): user control release (45)
+DEBUG:   [           83409]	key released: Fast forward (49)
+DEBUG:   [           96476]	unregistering all CEC clients
+NOTICE:  [           96476]	unregistering client: libCEC version = 2.1.1, client version = 2.1.1, firmware version = 4, firmware build date: Thu Dec  6 11:15:20 2012 +0000, logical address(es) = Recorder 1 (1) , base device: TV (0), HDMI port number: 1, physical address: 1.0.0.0, host: x86_64-apple-darwin12.3.0, features: 'P8 USB' 'P8 USB detect', git revision: 3ff78be, compiled on: Sat Apr 27 04:53:07 UTC 2013 by elliot@Thor on Darwin 12.3.0 (x86_64)
+DEBUG:   [           96476]	Recorder 1 (1): power status changed from 'on' to 'unknown'
+DEBUG:   [           96476]	Recorder 1 (1): CEC version unknown
+DEBUG:   [           96476]	Recorder 1 (1): osd name set to 'Recorder 1'
+DEBUG:   [           96476]	marking Recorder 1 (1) as inactive source
+DEBUG:   [           96476]	Recorder 1 (1): device status changed into 'unknown'
+DEBUG:   [           96477]	setting ackmask to  0
+DEBUG:   [           96482]	turning controlled mode off
+DEBUG:   [           96487]	unregistering all CEC clients
+DEBUG:   [           96498]	communication thread ended
