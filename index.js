@@ -34,7 +34,8 @@ function CECClientDevice() {
 
   var parsers = {
     press : /key pressed: ([^(]+) \(/,
-    release : /key released: ([^(]+) \(/
+    release : /key released: ([^(]+) \(/,
+    tv: /TV \([0-9]+\): power status changed from '[^']*' to '([^']+)'/
   };
 
   byline(this._cec.stdout).on('data', function(line) {
